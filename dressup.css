@@ -2,11 +2,11 @@ body{
     margin: 0;
 	background-color: #fff;
     font-family: 'Ubuntu', sans-serif;
+    background-image: url('images/background.png');
 }
 
 h1 {
     font-family: 'Fredoka One', cursive;
-    text-align: center;
 }
 
 #container {
@@ -19,7 +19,7 @@ img {
     height:100%;
 }
 
-button{
+button {
     cursor: pointer;
     border-radius: 100%;
     height: 50px;
@@ -27,52 +27,60 @@ button{
     z-index: 999;
 }
 
-ul{
-	list-style-type: none;
-	display:inline-block;
-}
-
-character{
+character {
     z-index: -1000;   
 }
 
-.shirt{
+.titleDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(256, 256, 256, 75%);
+}
+
+#refreshButton {
+    position: relative;
+    border-radius: 10px;
+    font-family: 'Fredoka One', cursive;
+    width: 100px;
+    box-shadow: 6px 6px 0px black;
+    margin: 50px;
+}
+
+#refreshButton:active {
+    left: 6px;
+    top: 6px;
+    box-shadow: none;
+}
+
+.acc {
+    visibility:hidden;
+    z-index: 5;
+}
+
+.hair {
+    visibility:hidden;
+    z-index: 4;
+}
+
+.shirt {
+	visibility:hidden;
+    z-index: 3;
+}
+
+.pant {
 	visibility:hidden;
     z-index: 2;
 }
 
-.pant{
-	visibility:hidden;
+.shoe {
+    visibility:hidden;
     z-index: 1;
-}
-
-.acc, .shoe, .hair {
-    visibility: hidden;
-    z-index: 3;
 }
 
 button[id$="_button"], button[id$="_button_prev"] {
     position: relative;
-}
-
-#shirt_button {
-    top: 400px;
-    right: 300px;
-}
-
-#shirt_button_prev {
-    top: 400px;
-    left: 300px;
-}
-
-#pant_button {
-    top: 600px;
-    right: 400px;
-}
-
-#pant_button_prev {
-    top: 600px;
-    left: 200px;
 }
 
 #acc_button {
@@ -93,6 +101,26 @@ button[id$="_button"], button[id$="_button_prev"] {
 #hair_button_prev {
     top: 200px;
     right: -400px;
+}
+
+#shirt_button {
+    top: 400px;
+    right: 300px;
+}
+
+#shirt_button_prev {
+    top: 400px;
+    left: 300px;
+}
+
+#pant_button {
+    top: 600px;
+    right: 400px;
+}
+
+#pant_button_prev {
+    top: 600px;
+    left: 200px;
 }
 
 #shoe_button {
