@@ -5,14 +5,14 @@ $(document).ready(function(){
         i = 0;
 
         this.Next = function() {
-            hide_current_image();
+            show_next_image();
         }
 
         this.Prev = function() {
-            hide_current_image_prev();
+            show_prev_image();
         }
         
-        var hide_current_image = function() {
+        var show_next_image = function() {
             if(choices){
                 choices[i].style.visibility = "hidden";
                 i += 1;
@@ -23,7 +23,7 @@ $(document).ready(function(){
             }
         }
 
-        var hide_current_image_prev = function() {
+        var show_prev_image = function() {
             if(choices){
                 choices[i].style.visibility = "hidden";
                 i -= 1;
